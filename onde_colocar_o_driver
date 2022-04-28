@@ -1,0 +1,13 @@
+Driver: Controlar um browser
+- Diferente para cada browser - Chrome, Firefox, Safari, etc...
+- Diferente para cada versão do browser - Chrome 100, Chrome 101...
+
+
+Onde inserir o Driver em minha IDE?
+- Dentro do projeto (**vendors/driver/chrome/100)
+
+Existem 3 formas de fazer.
+1- Colocar o driver dentro do projeto
+2- Colocar em um local centralizado no computador/servidor/rede
+3- Dentro da pasta PythonNNN/scripts
+4- Atualização automágica
