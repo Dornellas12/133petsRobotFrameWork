@@ -31,14 +31,17 @@ Dado que acesso o site como cliente
     open browser    ${url}  ${browser}
 
 Quando escrevo "${palavra_chave}" na barra de pesquisa
-    Set Test Variable   ${palavra_chave}
-    input text      name = q    ${palavra_chave}
+    set test variable               ${palavra_chave}
+    wait until element is enabled   name = q
+    input text      name = q        ${palavra_chave}
 
 E clico no botao da lupa
     click button    class = button-search
 
 Entao exibe um grid e a frase do resultado esperado
+    wait until element is enabled   css = h1.h2Categoria.nomeCategoria
     element should contain  css = h1.h2Categoria.nomeCategoria     RESULTADOS PARA "${palavra_chave}"
+
 
 Feche o browser
     close browser
